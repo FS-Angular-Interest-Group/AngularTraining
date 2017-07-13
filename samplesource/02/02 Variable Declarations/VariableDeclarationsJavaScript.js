@@ -4,5 +4,5 @@ function f(shouldInitialize) {
   }
  return x; 
 }
-f(true); // returns '10' 
-f(false); // returns 'undefined'
+console.log("f(true) :" + f(true)); // returns '10' 
+console.log("f(false) :" + f(false)); // returns 'undefined'

@@ -7,6 +7,10 @@ class MyMath {
         return x + y + z;
     }
   }
+
+  sum(x: number, y :number) {
+    this.add(x, y);
+  }
 }
 let math = new MyMath();
 document.body.innerHTML = math.add(1).toString();

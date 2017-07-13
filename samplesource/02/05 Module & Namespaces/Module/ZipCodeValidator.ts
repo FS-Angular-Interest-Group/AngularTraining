@@ -1,4 +1,4 @@
-import {StringValidator} from './interface.StringValidator';
+import {StringValidator, NumberValidator} from './interface.StringValidator';
 
 export const numberRegexp = /^[0-9]+$/;
 
