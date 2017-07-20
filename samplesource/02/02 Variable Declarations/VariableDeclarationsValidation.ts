@@ -8,4 +8,4 @@ function printLabel(labelledObj: LabelledValue) {
  console.log(labelledObj.label); 
 } 
 let myObj = {label : " myObj ", value: "10"};
-printLabel(<LabelledValue> myObj);
+printLabel(myObj);
