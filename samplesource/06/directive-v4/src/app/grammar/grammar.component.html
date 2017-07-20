@@ -1,0 +1,19 @@
+<div class="Container">
+  <div class="col-xs-12">
+    
+    <ul>
+      <li *ngFor="let item of items" >{{item.name}}</li>
+    </ul>
+    <hr/>
+    <!-- Attribute Directive --> 
+    Attribute Directive:
+    <div [style.font-size]="!isSpecial ? 'x-large' : 'smaller'">
+      This div is x-large or smaller.
+    </div>
+    <hr/>
+    ngModel: <input type="text" [(ngModel)] = "title">
+
+  </div>
+</div>
+
+<!-- <app-animation></app-animation> -->
