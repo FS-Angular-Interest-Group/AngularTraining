@@ -6,6 +6,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { HighlightDirective } from './highlight.directive';
+import { DelayDirective } from './delay.directive';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AnimationComponent } from './animation/animation.component';
@@ -23,6 +24,7 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
+    DelayDirective,
     HighlightDirective,
     AnimationComponent,
     BooksComponent,

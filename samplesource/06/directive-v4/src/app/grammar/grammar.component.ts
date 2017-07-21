@@ -6,8 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./grammar.component.css']
 })
 export class GrammarComponent implements OnInit {
+  title:string = 'Hi, Everyone!';
   items: Array<any> = [];
   selected: any;
+  isSpecial: boolean;
+  currentChar:string = 'a';
   constructor() {
     this.items = [{
       'name': 'item1'

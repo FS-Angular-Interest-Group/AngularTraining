@@ -9,6 +9,8 @@ export class BookDetailComponent implements OnInit {
 
   @Input() book: any;
 
+  color:string = 'blue';
+
   constructor() { }
 
   ngOnInit() {
