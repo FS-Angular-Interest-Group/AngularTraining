@@ -1,0 +1,51 @@
+<div class="Container">
+  <div class="col-xs-12">
+    <h2>{{title}}</h2>
+    <hr/>
+    <!-- Attribute Directive --> 
+    <div [style.font-size]="!isSpecial ? 'x-large' : 'smaller'">
+      This div is x-large or smaller.
+    </div>
+    <hr/>
+    <h4>ngModel</h4>
+    <input type="text" [(ngModel)] = "title">
+    <hr/>
+    <!-- angualr4 ngif -->
+    <h4>ngif</h4>
+    <div *ngIf="bookItems; else loading">
+      bookItems
+    </div>
+    <ng-template #loading>Loading...</ng-template>
+    <hr/>
+    <!-- angualr4 ngFor -->
+    <h4>ngFor</h4>
+    <ul>
+      <li *ngFor="let item of items" >{{item.name}}</li>
+    </ul>
+    <hr/>
+    <!-- angualr4 NgSwitch -->
+    <h4>NgSwitch</h4>
+    <div [ngSwitch]="currentChar">
+      current char: 
+      <span *ngSwitchCase="'a'">a</span>
+      <span *ngSwitchCase="'b'">b</span>
+      <span *ngSwitchCase="'c'">c</span>
+      <span *ngSwitchDefault>unknown</span>
+    </div>
+    <hr/>
+    <!-- structural directive -->
+    <h4>Structural directive</h4>
+    <ul>
+      <span *ngFor="let item of items; let i = index">
+        <li *itemDelay="1000 * i">
+          {{item.name}}
+        </li>
+      </span>
+    </ul>
+    <hr/>
+    <!-- attribute directive -->
+    <h4 myHighlight>Attribute directive</h4>
+  </div>
+</div>
+
+<!-- <app-animation></app-animation> -->
