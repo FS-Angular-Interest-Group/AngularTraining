@@ -11,7 +11,7 @@
     Home
   </a>
   |
-	<a [routerLink]="['/about']">
+  <a [routerLink]="[{ outlets: { test1: ['about'] }}]">
     About
   </a>
   |
@@ -25,5 +25,6 @@
 </nav>
 
 <main>
-	<router-outlet></router-outlet>
+  <router-outlet></router-outlet>
+  <router-outlet name="test1"></router-outlet>
 </main>
