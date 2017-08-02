@@ -6,7 +6,9 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { HighlightDirective } from './highlight.directive';
+import { BetterHighlightDirective } from './betterHighlight.directive';
 import { DelayDirective } from './delay.directive';
+import { CustomIfDirective } from './customIf.directive';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AnimationComponent } from './animation/animation.component';
@@ -15,23 +17,28 @@ import { GrammarComponent } from './grammar/grammar.component';
 import { BooksListComponent } from './books/books-list/books-list.component';
 import { BookItemComponent } from './books/books-list/book-item/book-item.component';
 import { BookDetailComponent } from './books/book-detail/book-detail.component';
+import { ExampleComponent } from './example/example.component';
 
 const appRoutes: Routes = [
   { path: 'grammar', component: GrammarComponent },
-  { path: 'books', component: BooksComponent }
+  { path: 'books', component: BooksComponent },
+  { path: 'example', component: ExampleComponent }
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
     DelayDirective,
+    CustomIfDirective,
     HighlightDirective,
+    BetterHighlightDirective,
     AnimationComponent,
     BooksComponent,
     GrammarComponent,
     BooksListComponent,
     BookItemComponent,
-    BookDetailComponent
+    BookDetailComponent,
+    ExampleComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),

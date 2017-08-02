@@ -33,8 +33,17 @@
       <span *ngSwitchDefault>unknown</span>
     </div>
     <hr/>
+
+    <!-- attribute directive -->
+    <h4 myHighlight>Attribute directive</h4>
+
     <!-- structural directive -->
     <h4>Structural directive</h4>
+
+    <div *customIf="false">
+      this is a custom if.
+    </div>
+
     <ul>
       <span *ngFor="let item of items; let i = index">
         <li *itemDelay="1000 * i">
@@ -43,8 +52,7 @@
       </span>
     </ul>
     <hr/>
-    <!-- attribute directive -->
-    <h4 myHighlight>Attribute directive</h4>
+    
   </div>
 </div>
 
