@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { ActivatedRoute, Params } from '@angular/router';
+
 @Component({
   selector: 'app-grammar',
   templateUrl: './grammar.component.html',
@@ -7,11 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GrammarComponent implements OnInit {
   title:string = 'Hi, Everyone!';
+  params: string = '';
   items: Array<any> = [];
   selected: any;
   isSpecial: boolean;
   currentChar:string = 'a';
-  constructor() {
+  constructor(private route: ActivatedRoute) {
     this.items = [{
       'name': 'item1'
     }, {
@@ -21,6 +24,9 @@ export class GrammarComponent implements OnInit {
     }]
   }
   ngOnInit() {
+    this.route.params.subscribe((params: Params) => {
+      this.params = params['id'];
+    });
   }
 
 }

@@ -58,6 +58,11 @@ import $ from 'jquery';
 
 
 // mergeMap
+
+// Rx.Observable.of('Hello').map(value => Rx.Observable.of(value + ', world')).subscribe(v => {
+//     console.log(v);
+// });
+
 // Rx.Observable.of('Hello').subscribe(v => {
 //     Rx.Observable.of(v + ', world')
 //     .subscribe(x => console.log(x));
@@ -71,6 +76,17 @@ import $ from 'jquery';
 //     return Rx.Observable.of(v + ', world');
 // }).subscribe(x => console.log(x));
 
+
+/**
+ -----c-----c----------|
+ mergeMap(e => Rx.Observable.interval(500).take(3))
+ ------0--1--0--2--1--2---|
+
+ */
+// var source = Rx.Observable.fromEvent(document.body, 'click');
+// source.mergeMap(e => Rx.Observable.interval(500).take(3))
+// .subscribe(v => console.log(v));
+
 /**
 
  -----c-----c----------|
@@ -78,6 +94,6 @@ import $ from 'jquery';
  ------0--1--0--1--2---|
 
  */
-var source = Rx.Observable.fromEvent(document.body, 'click');
-source.switchMap(e => Rx.Observable.interval(500).take(3))
-.subscribe(v => console.log(v));
+// var source = Rx.Observable.fromEvent(document.body, 'click');
+// source.switchMap(e => Rx.Observable.interval(500).take(3))
+// .subscribe(v => console.log(v));

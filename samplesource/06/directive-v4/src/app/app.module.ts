@@ -20,9 +20,9 @@ import { BookDetailComponent } from './books/book-detail/book-detail.component';
 import { ExampleComponent } from './example/example.component';
 
 const appRoutes: Routes = [
-  { path: 'grammar', component: GrammarComponent },
-  { path: 'books', component: BooksComponent },
-  { path: 'example', component: ExampleComponent }
+  { path: 'grammar/:id', component: GrammarComponent },
+  { path: 'books/:id', component: BooksComponent },
+  { path: 'example/:id', component: ExampleComponent }
 ];
 
 @NgModule({
