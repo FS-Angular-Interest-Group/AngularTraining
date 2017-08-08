@@ -1,0 +1,10 @@
+<h3>Repo list</h3>
+<ul>
+	<li *ngFor="let repo of repos | async">
+    <a (click)="detal(repo)">
+      {{ repo.name }}
+    </a>
+  </li>
+</ul>
+
+<router-outlet></router-outlet>
