@@ -1,0 +1,20 @@
+
+<button (click) = "onclick('detail')">Go to detail</button>
+<button (click) = "onclick('home')">Go to home</button>
+
+<div class="row table-header">
+    <div class="col-1">姓名 </div>
+    <div class="col-2">性别 </div>
+    <div class="col-1">项目 </div>
+    <div class="col-2">职位 </div>
+    <!-- <div class="col-2">操作 </div> -->
+</div>
+
+<div class="row table-row" *ngFor="let employee of employees">
+    <div class="col-1">{{employee.name}} </div>
+    <div class="col-2">{{employee.sex}} </div>
+    <div class="col-1">{{employee.project}} </div>
+    <div class="col-2">{{employee.position}}  </div>
+    <!-- <div class="col-2">操作 </div> -->
+</div>
+
