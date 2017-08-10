@@ -25,6 +25,6 @@ export class RepoListComponent implements OnInit {
   }
 
   detal(repo) {
-    this.router.navigate(['github', {org: repo.owner.login, repo: repo.name}]);
+    this.router.navigate(['/github', {org: repo.owner.login, repo: repo.name}]);
   }
 }

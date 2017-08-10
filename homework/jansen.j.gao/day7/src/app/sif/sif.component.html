@@ -1,0 +1,17 @@
+<div>
+  <table class="table table-hover">
+    <caption>领便当名单</caption>
+    <thead>
+      <tr>
+        <th>名字</th>
+        <th>家族</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let person of persons">
+        <td>{{person.name}}</td>
+        <td>{{person.family}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

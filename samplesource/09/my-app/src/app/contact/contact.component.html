@@ -1,23 +1,23 @@
 <h2>Contact Reactive Form</h2>
-<form (ngSubmit)="submitForm()" [formGroup]="contactForm" novalidate>
+
   <div class="form-content">
     <label>
       Name:
-      <input type="text" formControlName="name" class="sd-form-control" placeholder="Enter your name.">
+      <input type="text" [(ngModel)]="info.name" class="sd-form-control" placeholder="Enter your name.">
     </label>
     <label>
       Email:
-      <input type="email" formControlName="email" class="sd-form-control" placeholder="Enter your email.">
+      <input type="email" [(ngModel)]="info.email" class="sd-form-control" placeholder="Enter your email.">
     </label>
     <label>
       Content:
-      <textarea formControlName="content" class="sd-form-control" placeholder="Content here."></textarea>
+      <textarea [(ngModel)]="info.content" class="sd-form-control" placeholder="Content here."></textarea>
     </label>
     <div class="form-submit">
-      <button type="submit">Submit</button>
+      <button (click)="submitForm()">Submit</button>
     </div>
   </div>
-</form>
+
 <label for="name">Name</label>
 
 <div class="form-value">
@@ -31,6 +31,15 @@
   <p>
     Valid: {{contactForm.valid}}
   </p>
+  <div *ngIf="formErrors.name" class="alert alert-danger">
+    {{ formErrors.name }}
+  </div>
+  <div *ngIf="formErrors.email" class="alert alert-danger">
+    {{ formErrors.email }}
+  </div>
+  <div *ngIf="formErrors.content" class="alert alert-danger">
+    {{ formErrors.content }}
+  </div>
   <p>Submit then open console to see full form.</p>
 </div>
 
