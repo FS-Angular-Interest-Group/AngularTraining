@@ -11,8 +11,9 @@ import { RepoBrowserComponent } from './github/repo-browser/repo-browser.compone
 import { RepoListComponent } from './github/repo-list/repo-list.component';
 import { RepoDetailComponent } from './github/repo-detail/repo-detail.component';
 import { ContactComponent } from './contact/contact.component';
-import { FormV } from './formV/formv';
 import { RbacService } from './rbac/rbac.service';
+import { TemplateComponent } from './form1/template.component';
+import { ReactiveComponent } from './form2/reactive.component';
 
 const rootRouterConfig: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -26,7 +27,8 @@ const rootRouterConfig: Routes = [
         ]
       }]
   },
-  {path: 'formV', component: FormV},
+  { path: 'form1', component: TemplateComponent },
+  { path: 'form2', component: ReactiveComponent },
   { path: 'contact', component: ContactComponent, canActivate: [RbacService] }
 ];
 
@@ -38,8 +40,9 @@ const rootRouterConfig: Routes = [
     RepoBrowserComponent,
     RepoListComponent,
     RepoDetailComponent,
-    FormV,
-    ContactComponent
+    ContactComponent,
+    TemplateComponent,
+    ReactiveComponent
   ],
   imports: [
     BrowserModule,
