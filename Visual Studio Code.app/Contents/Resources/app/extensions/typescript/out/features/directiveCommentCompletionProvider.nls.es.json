@@ -1,5 +1,0 @@
-[
-	"Habilita la verificación semántica en un archivo de JavaScript. Debe estar al principio del archivo.",
-	"Deshabilita la verificación semántica en un archivo de JavaScript. Debe estar al principio del archivo.",
-	"Suprime los errores @ts-check en la siguiente línea de un archivo. "
-]
