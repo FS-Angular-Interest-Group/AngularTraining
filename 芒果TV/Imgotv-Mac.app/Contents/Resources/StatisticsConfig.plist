@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>enableCatchException</key>
+	<integer>1</integer>
+	<key>developmentBaseUrl</key>
+	<string>http://log.v2.hunantv.com/dispatcher.do</string>
+	<key>baseUrl</key>
+	<string>http://log.v2.hunantv.com/dispatcher.do</string>
+	<key>liveUrl</key>
+	<string>http://log.event.hunantv.com/dispatcher.do</string>
+	<key>playerQualityUrl</key>
+	<string>http://v2.log.hunantv.com/info.php</string>
+	<key>playerCatonUrl</key>
+	<string>http://v1.play.log.hunantv.com/info.php</string>
+	<key>pvUrl</key>
+	<string>http://mac.v0.mgtv.com/pv.php</string>
+	<key>macV1</key>
+	<string>http://mac.v1.mgtv.com/dispatcher.do</string>
+	<key>logEnabled</key>
+	<integer>1</integer>
+	<key>logLevel</key>
+	<integer>15</integer>
+	<key>reviewMode</key>
+	<integer>0</integer>
+	<key>version</key>
+	<string>1.0</string>
+</dict>
+</plist>

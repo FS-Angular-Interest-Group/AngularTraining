@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>canStatistics</key>
+	<integer>1</integer>
+	<key>cachePolicy</key>
+	<integer>1</integer>
+	<key>requestTiemout</key>
+	<integer>15</integer>
+	<key>developmentBaseUrl</key>
+	<string>http://mac-dev.api.hunantv.com</string>
+	<key>baseUrl</key>
+	<string>http://mac.api.hunantv.com</string>
+	<key>logEnabled</key>
+	<integer>1</integer>
+	<key>logLevel</key>
+	<integer>15</integer>
+	<key>reviewMode</key>
+	<integer>0</integer>
+	<key>version</key>
+	<string>1.0</string>
+</dict>
+</plist>

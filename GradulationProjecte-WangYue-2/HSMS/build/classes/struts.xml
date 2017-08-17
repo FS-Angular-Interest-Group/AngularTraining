@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts>
+
+	<package name="default" extends="struts-default">
+
+		<!--UserLogin -->
+		<action name="loginAdmin" class="com.action.AdminAction">
+			<result name="sucess">/page/adminPage.jsp</result>
+			<result name="false">/page/login.jsp</result>
+		</action>
+		<action name="loginDoctor" class="com.action.DoctorAction">
+			<result name="sucess">/page/doctorPage.jsp</result>
+			<result name="false">/page/login.jsp</result>
+		</action>
+		<action name="loginPatient" class="com.action.PatientAction">
+			<result name="sucess">/page/patientPage.jsp</result>
+			<result name="false">/page/login.jsp</result>
+		</action>
+
+		<!-- UserAdd -->
+
+		<action name="addAdmin" class="com.action.AdminAction" method="isAddAdmin">
+			<result name="success">/page/queryadminInfo.jsp</result>
+		</action>
+		<action name="addDoctor" class="com.action.DoctorAction"
+			method="isAddDoctor">
+			<result name="success">/page/querydoctorInfo.jsp</result>
+		</action>
+
+		<action name="PatientAction" class="com.action.PatientAction"
+			method="addPatient">
+			<result name="success">/page/login.jsp</result>
+			<result name="failure">/page/regist.jsp</result>
+		</action>
+		<action name="bookAction" class="com.action.BookAction" method="book">
+			<result name="success">/page/patientPage.jsp</result>
+			<result name="failure">/page/book.jsp</result>
+		</action>
+
+
+		<!-- UserModify -->
+		<action name="modifyAction" class="com.action.AdminAction"
+			method="updateAdmin">
+			<result name="success">/page/login.jsp</result>
+			<result name="failure">/page/updateAdmin.jsp</result>
+		</action>
+		<action name="modifyDoctor" class="com.action.DoctorAction"
+			method="updateDoctor">
+			<result name="success">/page/login.jsp</result>
+			<result name="failure">/page/updateDoctor.jsp</result>
+		</action>
+
+
+		<!-- UserQuery -->
+		<action name="queryAdmin" method="findAdminById" class="com.action.AdminAction">
+			<result name="find">/page/adminInfo.jsp</result>
+			<result name="failure">/page/adminPage.jsp</result>
+			<result name="success">/page/queryadminInfo.jsp</result>
+		</action>
+		<action name="queryDoctor" method="findDoctorById" class="com.action.DoctorAction">
+			<result name="find">/page/doctorInfo.jsp</result>
+		</action>
+
+		<!-- Query doctor info -->
+
+		<action name="queryPatient" method="findPatientById" class="com.action.PatientAction">
+			<result name="find">/page/patientInfo.jsp</result>
+		</action>
+		<action name="QPatient" method="selectPat" class="com.action.PatientAction">
+			<result name="success">/page/querypatientInfo.jsp</result>
+		</action>
+		<action name="QDoctor" method="selectdoc" class="com.action.DoctorAction">
+			<result name="success">/page/querydoctorInfo.jsp</result>
+		</action>
+	</package>
+</struts>
+
+

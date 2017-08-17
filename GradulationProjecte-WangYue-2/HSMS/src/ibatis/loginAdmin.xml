@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap PUBLIC  "-//iBATIS.com//DTD SQL Map 2.0//EN" "http://www.ibatis.com/dtd/sql-map-2.dtd">
+<sqlMap namespace="loginAdmin">
+
+	<!-- 登录判断，将username和password传入查询是否存在，存在，返回UserVo对象，否则返回null -->
+	<select id="isLogin" resultClass="com.domain.AdminVo"
+		parameterClass="com.domain.AdminVo">
+		SELECT
+		id AS id,
+		username AS username,
+		passwd AS password
+		FROM admin
+		WHERE
+		1=1
+		<isNotEmpty prepend="AND" property="username">
+			username = #username#
+		</isNotEmpty>
+		<isNotEmpty prepend="AND" property="password">
+			passwd = #password#
+		</isNotEmpty>
+	</select>
+</sqlMap>

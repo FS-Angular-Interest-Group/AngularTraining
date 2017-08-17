@@ -1,0 +1,14 @@
+<!-- <p>
+  employee-page works!
+</p> -->
+
+<div *ngFor = "let employee of employees">
+  Name: {{employee.name}} <br>
+  Sex: {{employee.sex}} <br>
+  Project: {{employee.project}} <br>
+  Position: {{employee.position}} <br>
+  Weight: {{employee.weight|roundup:10}} <br>
+  Birthday: {{employee.birthday|date:"yyyy/MM/dd"}}<br>
+  <hr>
+</div>
+

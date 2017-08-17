@@ -1,0 +1,135 @@
+body, div, ul, li {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: "΢���ź�", Arial, Helvetica, sans-serif;
+	color: #333333;
+	line-height: 25px;
+	font-size: 14px;
+}
+
+a:link, a:visited {
+	text-decoration: none;
+	color: #333333;
+}
+
+a:hover {
+	text-decoration: underline;
+	color: #08A5E0;
+	text-decoration: none;
+}
+
+ul, ul li {
+	list-style-type: none;
+}
+
+.cl {
+	zoom: 1;
+}
+
+/*��վͷ��*/
+.col960 {
+	width: 1000px;
+	margin: auto;
+}
+
+.navbg {
+	height: 40px;
+	width: 950px;
+	background: #08A5E0;
+	/*��Ӱ*/
+	box-shadow: 1px 1px 6px #999;
+	position: absolute;
+	/*Ԫ�صĶѵ�˳��*/
+	z-index: 99;
+	left: 0;
+	margin-left: 199px;
+}
+
+#navul li {
+	float: left;
+	margin-right: 1px;
+	width: 100px;
+	height: 40px;
+	position: relative;
+	text-align: center;
+	line-height: 40px;
+}
+
+#navu li {
+	float: left;
+	margin-right: 1px;
+	width: 700px;
+	height: 40px;
+	position: relative;
+	text-align: center;
+	line-height: 40px;
+	font-size: 18px;
+	font-style: normal;
+}
+
+#navul li.navhome {
+	text-align: left;
+	padding: 0 0px 0 40px;
+	width: 60px;
+}
+
+#navul li a:link, #navul li a:visited {
+	color: #FFFFFF;
+}
+
+#navul li ul {
+	display: none;
+	position: absolute;
+	z-index: 10000;
+	top: 38px;
+	left: -1px;
+	background: #006D96;
+	border: #004E6C 1px solid;
+	border-bottom: none;
+}
+
+#navul li ul li {
+	display: block;
+	width: 98px;
+	float: none;
+	margin-right: 0px;
+	height: 28px;
+	position: relative;
+	line-height: 28px;
+	border-bottom: #004E6C 1px solid;
+	font-size: 12px;
+}
+
+#navul li.navmoon {
+	background: #006D96;
+	border: #004E6C 1px solid;
+	width: 98px;
+	height: 38px;
+	line-height: 38px;
+}
+
+#navul li.navmoon a {
+	color: #000000;
+}
+
+#navul li.navhome a:hover {
+	color: #FCFF00;
+}
+
+#navul li.navmoon ul {
+	display: block;
+}
+
+#navul li.navmoon ul a {
+	display: block;
+	width: 98px;
+	height: 28px;
+	line-height: 28px;
+}
+
+#navul li.navmoon ul a:hover {
+	background: #FFFFFF;
+}

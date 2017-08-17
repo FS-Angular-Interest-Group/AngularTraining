@@ -1,0 +1,8 @@
+{"error":{"code":255,"message":"Class DaMai is not empty, contains 1 objects, cannot drop schema."},"level":"error","message":"Error generating response. ParseError {\n  code: 255,\n  message: 'Class DaMai is not empty, contains 1 objects, cannot drop schema.' }","timestamp":"2017-07-30T02:43:20.684Z"}
+{"code":255,"message":"Class DaMai is not empty, contains 1 objects, cannot drop schema.","level":"error","timestamp":"2017-07-30T02:43:20.687Z"}
+{"error":{"code":255,"message":"Class DaMai is not empty, contains 1 objects, cannot drop schema."},"level":"error","message":"Error generating response. ParseError {\n  code: 255,\n  message: 'Class DaMai is not empty, contains 1 objects, cannot drop schema.' }","timestamp":"2017-07-30T02:43:23.217Z"}
+{"code":255,"message":"Class DaMai is not empty, contains 1 objects, cannot drop schema.","level":"error","timestamp":"2017-07-30T02:43:23.220Z"}
+{"error":{"code":255,"message":"Class DaMai is not empty, contains 1 objects, cannot drop schema."},"level":"error","message":"Error generating response. ParseError {\n  code: 255,\n  message: 'Class DaMai is not empty, contains 1 objects, cannot drop schema.' }","timestamp":"2017-07-30T02:43:27.633Z"}
+{"code":255,"message":"Class DaMai is not empty, contains 1 objects, cannot drop schema.","level":"error","timestamp":"2017-07-30T02:43:27.633Z"}
+{"error":{"code":101,"message":"Object not found."},"level":"error","message":"Error generating response. ParseError { code: 101, message: 'Object not found.' }","timestamp":"2017-07-30T02:45:03.892Z"}
+{"code":101,"message":"Object not found.","level":"error","timestamp":"2017-07-30T02:45:03.893Z"}

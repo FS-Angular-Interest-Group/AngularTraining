@@ -1,0 +1,16 @@
+{
+"compilerOptions": {
+"target": "es2017",
+    "noImplicitAny": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "moduleResolution": "node",
+    "outDir": "js"
+     },
+     "include":[
+         "./*.ts"
+     ],
+     "exclude": [
+         "js"
+     ]
+}

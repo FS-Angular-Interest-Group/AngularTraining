@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMapConfig 
+    PUBLIC "-//iBATIS.com//DTD SQL Map Config 2.0//EN" 
+    "http://www.ibatis.com/dtd/sql-map-config-2.dtd">
+<sqlMapConfig>
+	<properties resource="jdbc.properties" />
+	<settings cacheModelsEnabled="true" enhancementEnabled="true"
+		lazyLoadingEnabled="true" maxRequests="512" maxSessions="128"
+		maxTransactions="32" useStatementNamespaces="true" />
+	<transactionManager type="JDBC">
+		<dataSource type="SIMPLE">
+
+			<!-- JDBC连接需要的配置 -->
+			<property name="JDBC.Driver" value="${jdbc.driver}" />
+			<property name="JDBC.ConnectionURL" value="${jdbc.url}" />
+			<property name="JDBC.Username" value="${jdbc.username}" />
+			<property name="JDBC.Password" value="${jdbc.password}" />
+
+			<!-- 连接池配置 -->
+			<property name="Pool.MaximumActiveConnections" value="${Pool.MaximumActiveConnections}" />
+			<property name="Pool.MaximumIdleConnections" value="${Pool.MaximumIdleConnections}" />
+			<property name="Pool.MaximumCheckoutTime" value="${Pool.MaximumCheckoutTime}" />
+			<property name="Pool.TimeToWait" value="${Pool.TimeToWait}" />
+			<property name="Pool.PingQuery" value="${Pool.PingQuery}" />
+			<property name="Pool.PingEnabled" value="${Pool.PingEnabled}" />
+			<property name="Pool.PingConnectionsOlderThan" value="${Pool.PingConnectionsOlderThan}" />
+			<property name="Pool.PingConnectionsNotUsedFor" value="${Pool.PingConnectionsNotUsedFor}" />
+		</dataSource>
+	</transactionManager>
+
+	<!-- 映射文件 -->
+	<sqlMap resource="ibatis/loginAdmin.xml" />
+	<sqlMap resource="ibatis/loginDoctor.xml" />
+	<sqlMap resource="ibatis/loginPatient.xml" />
+	<sqlMap resource="ibatis/userSql.xml" />
+
+</sqlMapConfig>
