@@ -1,0 +1,17 @@
+ <p>
+  timer-father works!
+</p> 
+
+  <p>请输入时间: <input [(ngModel)]="hours" type = 'number' name = "hours" min = 0 max = 24 /> 小时   
+               <input [(ngModel)]="mins" type = 'number' name = "mins"  min = 0 max = 59/>分
+               <input [(ngModel)]="secs" type = 'number' name = "secs"  min = 0 max = 59/>秒
+               <button (click) = "start()">开始</button>
+</p>
+<div>
+  剩余时间： {{this.remain.hours}}时{{this.remain.mins}}分{{this.remain.secs}}秒
+</div>   
+
+<div>
+  <app-timer-children [hours]="hours" [mins]="mins" [secs]="secs" (changehours) = "hoursChange($event)" (changemins)="minsChange($event)" (changesecs)="secsChange($event)"> </app-timer-children>  
+</div>
+

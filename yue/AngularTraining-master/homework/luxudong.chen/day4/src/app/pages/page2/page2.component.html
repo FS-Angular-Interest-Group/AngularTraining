@@ -1,0 +1,22 @@
+<h2>list</h2>
+
+<form (ngSubmit)="submitForm()" [formGroup]="page2Form">
+  <div class="form-content">
+    <ul>
+      <!-- <li *ngFor="let fruit of listitems; let i = index;">{{listitems[i]}}</li>
+      <li *ngFor="let item of listitems; let i = index;">{{item}}</li> -->
+      <!-- <li *ngFor="let item of listitems;"><a (click)="movetodetail('searchDetail')">{{item}}</a></li> -->
+    </ul>
+    <table>
+      <tr *ngFor="let item of listitems;">
+        <td>
+          <input type="button" value="{{item}}" (click)="movetodetail('searchDetail')">
+        </td>
+      </tr>
+    </table>
+    <!-- <input type="button" *ngFor="let item of listitems;" value="{{item}}" (click)="movetodetail('searchDetail')"> -->
+    <!-- <div class="form-submit">
+      <button type="submit">Submit</button>
+    </div> -->
+  </div>
+</form>

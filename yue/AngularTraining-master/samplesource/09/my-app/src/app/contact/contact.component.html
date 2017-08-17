@@ -1,0 +1,45 @@
+<h2>Contact Reactive Form</h2>
+
+  <div class="form-content">
+    <label>
+      Name:
+      <input type="text" [(ngModel)]="info.name" class="sd-form-control" placeholder="Enter your name.">
+    </label>
+    <label>
+      Email:
+      <input type="email" [(ngModel)]="info.email" class="sd-form-control" placeholder="Enter your email.">
+    </label>
+    <label>
+      Content:
+      <textarea [(ngModel)]="info.content" class="sd-form-control" placeholder="Content here."></textarea>
+    </label>
+    <div class="form-submit">
+      <button (click)="submitForm()">Submit</button>
+    </div>
+  </div>
+
+<label for="name">Name</label>
+
+<div class="form-value">
+  Form value:
+  <pre>
+    {{contactForm.value | json}}
+  </pre>
+  <p>
+    Status: {{contactForm.status}}
+  </p>
+  <p>
+    Valid: {{contactForm.valid}}
+  </p>
+  <div *ngIf="formErrors.name" class="alert alert-danger">
+    {{ formErrors.name }}
+  </div>
+  <div *ngIf="formErrors.email" class="alert alert-danger">
+    {{ formErrors.email }}
+  </div>
+  <div *ngIf="formErrors.content" class="alert alert-danger">
+    {{ formErrors.content }}
+  </div>
+  <p>Submit then open console to see full form.</p>
+</div>
+
