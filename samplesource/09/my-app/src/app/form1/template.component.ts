@@ -1,4 +1,4 @@
-import { Component, ViewChild, ViewChildren, ElementRef, QueryList } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Hero }    from './hero';
 
@@ -22,22 +22,13 @@ export class TemplateComponent {
   heroForm: NgForm;
   @ViewChild('heroForm') currentForm: NgForm;
 
-  constructor(private el: ElementRef) {
-    this.el.nativeElement.querySelector('[type=text]');
-  }
-
   onSubmit() { this.submitted = true; }
 
   newHero() {
     this.model = new Hero(42, '', '');
   }
 
-  changeName() {
-    console.log('change');
-  }
-
   ngAfterViewChecked() {
-    console.log('ngAfterViewChecked');
     this.formChanged();
   }
 
