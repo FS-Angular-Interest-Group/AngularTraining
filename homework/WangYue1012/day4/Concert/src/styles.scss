@@ -1,0 +1,58 @@
+/* You can add global styles to this file, and also import other style files */
+
+// Global Style
+body{
+    background-color: beige;
+}
+a{
+    color:#FFF;
+    text-decoration:none;    
+}
+a:visited{
+    color:#FFF;
+}
+
+.header {
+    background-color: #0099FF;
+    height:70px;
+    color: #ffffff;
+    padding: 5px;
+}
+.main-container{
+    height:340px;
+    overflow-y: scroll;
+    color:#0099FF;
+    font-size: 14px;
+}
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    padding: 8px;
+    margin-bottom: 7px;
+    background-color :#0099FF;
+    color: #ffffff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+.menu li:hover {
+    background-color: pink;
+}
+.aside {
+    background-color: #0099FF;
+    padding: 15px;
+    color: #ffffff;
+    text-align: center;
+    font-size: 14px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.footer {
+    // background-color: #0099cc;
+    color: #000;
+    text-align: center;
+    font-size: 12px;
+    padding: 15px;
+}

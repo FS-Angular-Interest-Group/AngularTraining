@@ -1,0 +1,30 @@
+<p>
+  <span *ngIf="isNew">演唱会添加</span>
+  <span *ngIf="!isNew">编辑用户:{{this.concertId}}</span>
+</p>
+
+<div>
+Name：
+<input type="text" [(ngModel)]="concert.name"/>
+</div>
+
+<div>
+Sale Sta:
+<select [(ngModel)]="concert.sale">
+  <option value="售罄">售罄</option>
+  <option value="在售">在售</option>
+  <option value="预售">预售</option>
+</select>
+</div>
+
+<div>
+Price：
+<input type="text" [(ngModel)]="concert.price"/>
+</div>
+
+<div>
+Location：
+<input type="text" [(ngModel)]="concert.location"/>
+</div>
+<button (click)="back()">Return</button>
+<button routerLink="/concert" (click)="save()">submit</button>

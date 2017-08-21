@@ -1,0 +1,9 @@
+<h1>{{isLogined}}</h1>
+<h1 *ngIf="user.state==false">状态：未登录</h1>
+<h1 *ngIf="user.state==true">状态：登陆[{{user.username}}]</h1>
+<h1 *ngIf="user.state==true">密码：[{{user.password}}]</h1>
+<input [value]="user.username" (keyup)="onKey($event,'username')" placeholder="请输入用户名/手机">
+<br>
+<input [value]="user.password" (keyup)="onKey($event,'password')"  type="password" placeholder="请输入密码">
+<br>
+<button (click)="login()">登陆</button>
