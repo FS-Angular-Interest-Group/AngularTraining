@@ -1,0 +1,23 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="header">
+<h2><a routerLink="login">Date:</a>{{now | date:"yyyy-MM-dd"}}&nbsp;&nbsp;&nbsp;&nbsp;Welcome to {{title}}</h2>
+</div>
+
+<div class="row">
+<div class="col-2 col-m-2 menu">
+<ul>
+<li><a routerLink="home">Home</a></li>
+<li><a routerLink="concert">Concert</a></li>
+<li><a routerLink="concert">Moive</a></li>
+<li><a routerLink="about">About</a></li>
+</ul>
+</div>
+<div class="col-10 col-m-10 main-container">
+<router-outlet></router-outlet>
+</div>
+
+</div>
+<div class="footer">
+<p>Copyright Wendy(Wang Yue) 2017</p>
+</div>
+

@@ -1,0 +1,7 @@
+      <div class="col-1" *ngIf="isChecked()" (click)="check()">[x]</div>
+      <div class="col-1" *ngIf="!isChecked()" (click)="check()">[&nbsp;&nbsp;]</div>
+      <div class="col-1" (click)="onConcertClick()">{{concert.id}}</div>
+      <div class="col-2">{{concert.name}}</div>
+      <div class="col-1">{{concert.sale}}</div>
+      <div class="col-1">{{concert.price}}</div>
+      <div class="col-1">{{concert.location}}</div>

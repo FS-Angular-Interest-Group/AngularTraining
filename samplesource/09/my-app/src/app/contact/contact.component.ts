@@ -1,4 +1,4 @@
-import { Component, OnInit, ElementRef } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import CustomValidators from '../forms/CustomValidators';
 
@@ -9,11 +9,10 @@ import CustomValidators from '../forms/CustomValidators';
 })
 export class ContactComponent implements OnInit {
   contactForm: FormGroup;
-  constructor(private formBuilder: FormBuilder, private el: ElementRef) {}
+  constructor(private formBuilder: FormBuilder) {}
   private info = {name: '',email: '', content: ''};
   private formErrors = {};
 
-  
   ngOnInit() {
     this.contactForm = this.formBuilder.group({
       name: [this.info.name, Validators.required],

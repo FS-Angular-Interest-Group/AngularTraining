@@ -1,0 +1,15 @@
+
+<div class="row table-header">
+      <div class="col-1" >Select</div>
+      <div class="col-1" (click)="sortByAsccending('id')">ID </div>
+      <div class="col-2" (click)="sortByAsccending('name')">艺人 </div>
+      <div class="col-1" (click)="sortByAsccending('sale')">售票状态 </div>
+      <div class="col-2" (click)="sortByAsccending('price')">价格 </div>
+      <div class="col-1" (click)="sortByDesccending('location')">地点 </div>
+</div>
+<div class="row table-row" *ngFor="let concert of searchResult">
+  <app-concert-item [concert]="concert" (concertClick)="selectConcert = $event"></app-concert-item>
+</div>
+<div class="row table-row" *ngFor="let concert of concerts">
+  <app-concert-item [concert]="concert" (concertClick)="selectConcert = $event"></app-concert-item>
+</div>
