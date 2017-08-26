@@ -1,0 +1,11 @@
+.countBox {
+    font-size: 30px;
+    background-color: #B7FBFF;
+    border-style: solid;
+    width: 160px;
+    padding: 5px;
+}
+.important {
+    color: red;
+    font-weight: bolder;
+}
