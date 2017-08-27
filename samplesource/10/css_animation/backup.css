@@ -1,0 +1,104 @@
+body {
+    background: lightblue;
+    text-align: center;
+    margin: 0;
+}
+
+.wrapper {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* 2. transform */
+.turtle {
+    /* X Y + - */
+    /* transform: translateX(-200px)  */
+     transform: scale(1) 
+    /* transform: rotate(-90deg) */
+    /* transform: scale(2) rotate(-45deg) */
+}
+
+/* 3. transition */
+.circle {
+    cursor: pointer;
+    width: 100px; 
+    padding: 50px 0;
+    margin: 50px auto;
+    line-height: 0;
+    background: pink;
+    color: white;
+    border-radius: 50px;
+    /* transition: 1s; */
+    transition: background 1s, transform 0.4s;
+    /* transition: background 1s, transform 0.4s 1s; */
+}
+
+.circle:hover {
+    background: salmon;
+    transform: rotate(360deg);
+}
+
+/* keyframes */
+.road {
+    height: 200px;
+    background: dimgray;
+    box-sizing: border-box;
+    border-top: 10px solid gray;
+    border-bottom: 10px solid gray;
+    width: 100%;
+    text-align: left;
+}
+
+.line {
+    box-sizing: border-box;
+    border-top: 5px dashed #fff;
+    border-bottom: 5px dashed #fff;
+    height: 0px;
+    width: 100%;
+    position: absolute;
+    top: 98%;
+}
+
+.car {
+    position: relative; 
+    top: -30px;
+    left: 0px;
+    animation-name: fire;
+    animation-duration: 5s;
+
+    /* 5. animation fill model*/
+    /* animation-fill-mode: forwards;
+    animation-delay: 2s; */
+
+    /* 6. repeating animation */
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+
+    /* 8. Animation Timing  */
+    animation-timing-function: cubic-bezier(.94,.02,1,.5)
+}
+
+/* 7. direction */
+.car2 {
+    position: relative;
+    top: 50px;
+    left: 0px;
+    animation-name: fire;
+    animation-duration: 7s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-direction: reverse;
+}
+
+/* 4. keyframes */
+/* @keyframes fire {
+    from { transform: translateX(0) }
+    to { transform: translateX(500px) }
+} */
+
+ /* repeating animation */
+@keyframes fire {
+    from { transform: translateX(-200px) }
+    to { transform: translateX(1200px) }
+}

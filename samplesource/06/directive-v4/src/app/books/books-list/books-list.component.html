@@ -1,12 +1,19 @@
-<div class="row" *ngIf="books.length !== 0; else loading">
-    <div class="col-md-5">
-      <a class="list-group-item clearfix" *ngFor="let book of books" (click)="selectedBook = book">
+
+<div>
+  <button class="btn btn-primary" (click)="pushBook()">Add book</button>
+  <button class="btn btn-danger" (click)="removeBook()">Remove book</button>
+</div>
+<br/>
+<div *ngIf="books.length === 0">
+    Loading...
+</div>
+<div class="row" [@listAnimation]="books.length">
+    <div class="col-md-7">
+      <a class="list-group-item clearfix" *ngFor="let book of books" (click)="selecteBook(book)">
          <app-book-item [book]="book"></app-book-item>
-         <!-- paging -->
       </a>
     </div>
-    <div class="col-md-7">
-      <app-book-detail *ngIf="selectedBook" [book]="selectedBook"></app-book-detail>
+    <div class="col-md-5" [@detailAnimation]="state" *ngIf="selectedBook">
+      <app-book-detail [book]="selectedBook"></app-book-detail>
     </div>
 </div>
-<ng-template #loading>Loading...</ng-template>

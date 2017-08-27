@@ -1,0 +1,19 @@
+/* 3. transition */
+.circle {
+    cursor: pointer;
+    width: 100px; 
+    padding: 50px 0;
+    margin: 50px auto;
+    line-height: 0;
+    background: pink;
+    color: white;
+    border-radius: 50px;
+    transition: 1s;
+    /* transition: background 1s, transform 0.4s; */
+    /* transition: background 1s, transform 0.4s 1s; */
+}
+
+.circle:hover {
+    background: salmon;
+    transform: rotate(360deg);
+}

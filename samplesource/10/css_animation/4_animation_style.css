@@ -1,0 +1,36 @@
+.road {
+    height: 200px;
+    background: dimgray;
+    box-sizing: border-box;
+    border-top: 10px solid gray;
+    border-bottom: 10px solid gray;
+    width: 100%;
+    text-align: left;
+}
+
+.line {
+    box-sizing: border-box;
+    border-top: 5px dashed #fff;
+    border-bottom: 5px dashed #fff;
+    height: 0px;
+    width: 100%;
+    position: absolute;
+    top: 14%;
+}
+
+.car {
+    position: relative; 
+    top: -30px;
+    left: 0px;
+    animation-name: fire;
+    animation-duration: 5s;
+
+    /* 5. animation fill model*/
+    animation-fill-mode: forwards;
+    animation-delay: 2s;
+}
+
+@keyframes fire {
+    from { transform: translateX(0px) }
+    to { transform: translateX(500px) }
+}
