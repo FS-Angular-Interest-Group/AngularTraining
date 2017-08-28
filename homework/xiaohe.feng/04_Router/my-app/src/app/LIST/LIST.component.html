@@ -1,0 +1,8 @@
+<h3>List Component</h3>
+<h4>The Param's Value from Home Component:{{this.param1}}</h4>
+<ul>
+<li><a [routerLink]="['/Detail', {'dp':'Detail1FromUrl'}]">Detail 001 param transfer by page</a></li>
+<li><a href="javascript:void(0)" (click)="gotoDetail()">Detail 002 param transfer by Component</a></li>
+</ul>
+
+<router-outlet></router-outlet>

@@ -1,0 +1,5 @@
+<h3 (click)="onHomeClick()">Home Component</h3>
+<a href="../../index.html">Welcome to Angular Seed</a>
+<input type="text" #searchHome placeholder="Search Home">
+<button (click)="gotoList(searchHome.value)">gotoList</button>
+<router-outlet></router-outlet>
