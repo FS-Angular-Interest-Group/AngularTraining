@@ -1,0 +1,11 @@
+body {
+    background: lightblue;
+    text-align: center;
+    margin: 0;
+}
+
+.wrapper {
+    width: 100%;
+    padding: 200px;
+    box-sizing: border-box;
+}

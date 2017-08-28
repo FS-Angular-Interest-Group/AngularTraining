@@ -1,0 +1,8 @@
+/* 2. transform */
+.boy {
+    /* X、Y*/
+    transform: translate(200px) 
+     /* transform: scale(1)  */
+    /* transform: rotate(-90deg) */
+    /* transform: scale(2) rotate(-45deg) */
+}
